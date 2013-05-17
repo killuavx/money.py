@@ -1,0 +1,6 @@
+[behave]
+lang=zh-CN
+/*format=plain*/
+logging_clear_handlers=no
+logging_filter=-suds
+show_skipped=no
