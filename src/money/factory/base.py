@@ -3,6 +3,7 @@
     Factory Base
 """
 
+
 class FactoryBase(object):
 
     from money.currencies import CURRENCY
@@ -33,16 +34,15 @@ class FactoryBase(object):
         rates = cls.load_exchange_rates()
         bank = cls.Bank()
         for r in rates:
-            bank.addRate(r.get('src'), r.get('dst'), r.get('rate'))
+            bank.add_rate(r.get('src'), r.get('dst'), r.get('rate'))
 
         return bank
-
 
     @classmethod
     def load_exchange_rates(cls):
         from itertools import product
         c = ["USD", "CHF", "CNY"]
-        rates = ({"src":src, "dst":dst} for src, dst in product(c, c) if src != dst)
+        rates = ({"src": src, "dst": dst} for src, dst in product(c, c) if src != dst)
         res = []
         for r in rates:
             r['rate'] = load_exchange_rate(r['src'], r['dst'])
@@ -54,7 +54,7 @@ def load_exchange_rate(src, dst):
     from decimal import Decimal
     from urllib.request import urlopen
     from_currency = src
-    kwargs = {'from':str(from_currency), 'to': str(dst)}
+    kwargs = {'from': str(from_currency), 'to': str(dst)}
     url = 'http://quote.yahoo.com/d/quotes.csv?s=%(from)s%(to)s=X&f=l1&e=.csv'
     response = urlopen(url % kwargs).read()
     try:

@@ -7,6 +7,18 @@ SRC=${DIR}/src
 PKGNAME=money.py
 EGGINFO=${PKGNAME}.egg-info
 
+.PHONY: readme
+readme:
+	@echo "# Money.py" > README.md
+	@cat OVERVIEW.md \
+	 AUTHORS.md \
+	 INSTALL.md \
+	 USAGE.md \
+	 FAQ.md \
+	 THANKS.md \
+	 TODO.md \
+	 ChangeLog.md >> README.md
+
 .PHONY: install
 install:
 	python3 setup.py install --record install.files

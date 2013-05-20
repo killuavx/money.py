@@ -1,0 +1,20 @@
+include OVERVIEW.md 
+include README.md
+include AUTHORS.md
+include INSTALL.md
+include FAQ.md
+include THANKS.md
+include TODO.md
+include Changelog.md
+include LICENSE.md
+include DEVELOPMENT.md
+include MANIFEST.in
+recursive-include src/money *.py
+recursive-include docs *
+recursive-include examples *
+recursive-include requirements *.md
+recursive-include tests *
+prune tests/reports
+prune tests/*.pyc
+prune src/*.pyc
+prune examples/*.pyc

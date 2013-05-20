@@ -7,6 +7,8 @@ __all__ = [ 'Currency', 'Money', 'Bank' ]
 
 class BaseCurrency(object):
 
+    code = None
+
     def __repr__(self):
         return self.code
 

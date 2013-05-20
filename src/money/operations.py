@@ -2,6 +2,8 @@
 '''
     货币四则运算表达式
 '''
+
+
 from decimal import Decimal
 from money.base import Expression, OperatorError
 from money.core import Money
@@ -156,6 +158,7 @@ class Div(Expression):
     def __repr__(self):
         return "<Div(%s / %s)>" % (repr(self.x), repr(self.y))
 
+
 class Round(Expression):
     """
         Round(x, y) ==> round(x, y)
@@ -182,5 +185,6 @@ class Operation(object):
     Div = Div
 
     Round = Round
+
 
 Expression.operation = Operation

@@ -7,6 +7,7 @@ src_dir = os.path.dirname(os.path.abspath(__file__)) + "/src"
 sys.path.append(src_dir)
 import money
 
+
 def local_open(fname):
     return open(os.path.join(os.path.dirname(__file__), fname))
 
@@ -36,21 +37,19 @@ setup(
     download_url=download_url,
     long_description=local_open('README.md').read(),
     keywords=["money", "currency", "business",
-        "cash", "enterprise", "e-commerce"],
+              "cash", "enterprise", "e-commerce"],
     install_requires=required_to_install,
     include_package_data=True,
-    classifiers = [
-        'Development Status :: 3 -  Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Operating System :: MacOS :: MacOS X',
-        'Operating System :: OS Independent',
-        'Operating System :: POSIX',
-        'Operating System :: Unix',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Topic :: Office/Business :: Financial',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-    ],
+    classifiers=['Development Status :: 3 - Alpha',
+                 'Intended Audience :: Developers',
+                 'License :: OSI Approved :: BSD License',
+                 'Operating System :: MacOS :: MacOS X',
+                 'Operating System :: OS Independent',
+                 'Operating System :: POSIX',
+                 'Operating System :: Unix',
+                 'Programming Language :: Python',
+                 'Programming Language :: Python :: 3.2',
+                 'Programming Language :: Python :: 3.3',
+                 'Topic :: Office/Business :: Financial',
+                 'Topic :: Software Development :: Libraries :: Python Modules', ],
 )
