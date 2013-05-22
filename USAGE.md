@@ -1,4 +1,4 @@
-## Usage
+## Usage 使用
 
 ### 开始
 
@@ -13,7 +13,7 @@
 其实更有效地了解项目的技巧是通过该项目的单元测试代码来熟悉, 
 详情可以参考tests/test_money，里面提供使用money.py的不同方式。
 
-### 高级使用
+### 高级应用
 
 money.py 采用工厂模式来实例化货币、以及bank进行货币计算、汇率转换的操作。
 相关源码目录如下:
@@ -27,7 +27,7 @@ money/
 		impromptu.py
 ```
 
-money.factory.base是作为货币工厂的基类，实现了具体货币类型(USD/CNY)方法。
+`money.factory.base`是作为货币工厂的基类，实现了具体货币类型(USD/CNY)方法。
 money.factory.default/impromptu 是具体的工厂模块，default.py是默认货币计算方式，
 impromptu.py是即席计算方式，具体说明可见对应模块的说明。
 
@@ -42,7 +42,7 @@ money.factory.base.FactoryBase类的方法，来实现诸如Bank装载获取汇�
 ```
 class Money(money.core.Money):
 
-	def	__str__():
+	def __str__():
 		return "%s%s%s" % (self.currency.prefix, self.amount, self.currency.suffix)
 
 class MyMoneyFactory(FactoryBase):

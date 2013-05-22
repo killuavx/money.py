@@ -1,6 +1,0 @@
-[{"src":'CHF', "dst":'CNY', "rate":'6.5423'},
-{"src":'CHF', "dst": 'USD', "rate":'1.0608'},
-{"src":'CNY', "dst": 'CHF', "rate":'0.1529'},
-{"src":'CNY', "dst": 'USD', "rate":'0.1621'},
-{"src":'USD', "dst": 'CHF', "rate":'0.9427'},
-{"src":'USD', "dst": 'CNY', "rate":'6.1673'}]

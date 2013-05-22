@@ -1,15 +1,15 @@
 # Money.py
 ## Overview 概览
 
-**Money.py**是一个国际货币的package. 你可以用在自己的项目中方便地进行
-相同货币间的比较, 不同货币转换以及的四则运算进而将运算表达式转换最终的货币
+**Money.py**是一个国际货币包。 你可以用在自己的项目中方便地进行
+相同货币间的比较, 不同货币转换以及的四则运算进而将运算表达式转换最终的货币。
 
 ## Install 安装
 
 ###安装之前的测试
 
-项目使用*unittest*做单元测试, 配合*nose* + *coverage*做集成测试, 
-功能测试使用*behave*.
+项目使用 *unittest* 做单元测试, 配合 *nose* + *coverage* 做集成测试, 
+功能测试使用 *behave* .
 
 *nix系统下采用以下方式完成单元测试和功能测试:
 
@@ -49,7 +49,7 @@ $ python setup.py build
 $ python setup.py install
 ```
 
-## Usage
+## Usage 使用
 
 ### 开始
 
@@ -64,7 +64,7 @@ $ python setup.py install
 其实更有效地了解项目的技巧是通过该项目的单元测试代码来熟悉, 
 详情可以参考tests/test_money，里面提供使用money.py的不同方式。
 
-### 高级使用
+### 高级应用
 
 money.py 采用工厂模式来实例化货币、以及bank进行货币计算、汇率转换的操作。
 相关源码目录如下:
@@ -78,7 +78,7 @@ money/
 		impromptu.py
 ```
 
-money.factory.base是作为货币工厂的基类，实现了具体货币类型(USD/CNY)方法。
+`money.factory.base`是作为货币工厂的基类，实现了具体货币类型(USD/CNY)方法。
 money.factory.default/impromptu 是具体的工厂模块，default.py是默认货币计算方式，
 impromptu.py是即席计算方式，具体说明可见对应模块的说明。
 
@@ -93,7 +93,7 @@ money.factory.base.FactoryBase类的方法，来实现诸如Bank装载获取汇�
 ```
 class Money(money.core.Money):
 
-	def	__str__():
+	def __str__():
 		return "%s%s%s" % (self.currency.prefix, self.amount, self.currency.suffix)
 
 class MyMoneyFactory(FactoryBase):
@@ -129,9 +129,20 @@ Thanks to s3x3y1 <s3x3y1@gmail.com>  [python-money][21] for the class Currnecy a
 
 ## TODO 代办列表
 
-####2013-05-01 已知缺陷
+####2013-05-01
 
-1. `money.core.Money.__round__`, Floating Point Arithmetic: Issues and Limitations http://docs.python.org/3.3/tutorial/floatingpoint.html
+#####新增项目文档
+
+在下一个版本中，将增加项目文档，位于docs目录下，包含以下类型文档：
+
+1. *design.model.md* 详细设计文档，解析代码整体结构、算法流程
+2. *maintain.md* 维护文档，记录开发过程中的备忘，测试信息，项目指标项
+3. *anlysis.model.md* 概要设计文档，整体概述项目功能、模块
+4. *money.vpp* UML设计图，Visual Paradigm for UML
+
+#####已知缺陷:
+
+1. `money.core.Money.__round__`, [Floating Point Arithmetic: Issues and Limitations](http://docs.python.org/3.3/tutorial/floatingpoint.html)
 
 	计算机的浮点数运算一直存在精度误差问题, 在python3.3中你可以看到如下结果
 
@@ -169,7 +180,7 @@ Thanks to s3x3y1 <s3x3y1@gmail.com>  [python-money][21] for the class Currnecy a
 	
 	不过这两种方式都不怎么优雅.
 
-2. money.operations.Round, 货币间转换的四舍五入处理问题
+2. `money.operations.Round`, 货币间转换的四舍五入处理问题
 	
 	在以下汇率背景情况下
 			
@@ -232,11 +243,11 @@ Thanks to s3x3y1 <s3x3y1@gmail.com>  [python-money][21] for the class Currnecy a
 #### News
 
 1. 完善README.md文档, 通过`make readme`合并文档
-2. 增加[DEVELOPMENT.md](DEVELOPMENT)文档，记录开发笔记
+2. 增加[DEVELOPMENT.md](DEVELOPMENT.md)文档，记录开发笔记
 
 #### Fixes
 
-1. `money.factory.base` FactoryBase方法bank内，使用错误的拼写调用Bank.add_rate
+1. `money.factory.base.FactoryBase`方法bank内，使用错误的拼写调用Bank.add_rate
  
 #### Important Notes
 

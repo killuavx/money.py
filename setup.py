@@ -21,9 +21,6 @@ for dist in requirements.readlines():
     except DistributionNotFound:
         required_to_install.append(dist)
 
-package_name = 'money'
-url_schema = 'http://pypi.python.org/packages/source/d/%s/%s-%s.tar.gz'
-download_url = url_schema % (package_name, package_name, money.__version__)
 setup(
     name='money.py',
     packages=find_packages('src'),
@@ -34,7 +31,6 @@ setup(
     author_email=money.__contact__,
     url=money.__homepage__,
     license=money.__license__,
-    download_url=download_url,
     long_description=local_open('README.md').read(),
     keywords=["money", "currency", "business",
               "cash", "enterprise", "e-commerce"],

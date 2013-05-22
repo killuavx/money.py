@@ -11,11 +11,11 @@
 #### News
 
 1. 完善README.md文档, 通过`make readme`合并文档
-2. 增加[DEVELOPMENT.md](DEVELOPMENT)文档，记录开发笔记
+2. 增加[DEVELOPMENT.md](DEVELOPMENT.md)文档，记录开发笔记
 
 #### Fixes
 
-1. `money.factory.base` FactoryBase方法bank内，使用错误的拼写调用Bank.add_rate
+1. `money.factory.base.FactoryBase`方法bank内，使用错误的拼写调用Bank.add_rate
  
 #### Important Notes
 

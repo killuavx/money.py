@@ -6,7 +6,7 @@ __author__ = "Killua.VX"
 __contact__ = "killua.vx@gmail.com"
 __homepage__ = ""
 __docformat__ = "markdown"
-__doc__ = 'Money, Currency, many currencies exchange rates library.'
+__doc__ = 'Money, Currency, many currencies and exchange rates library.'
 __license__ = 'BSD'
 
 from money.base import set_currency_provider, set_default_currency

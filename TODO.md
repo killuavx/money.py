@@ -1,8 +1,19 @@
 ## TODO 代办列表
 
-####2013-05-01 已知缺陷
+####2013-05-01
 
-1. `money.core.Money.__round__`, Floating Point Arithmetic: Issues and Limitations http://docs.python.org/3.3/tutorial/floatingpoint.html
+#####新增项目文档
+
+在下一个版本中，将增加项目文档，位于docs目录下，包含以下类型文档：
+
+1. *design.model.md* 详细设计文档，解析代码整体结构、算法流程
+2. *maintain.md* 维护文档，记录开发过程中的备忘，测试信息，项目指标项
+3. *anlysis.model.md* 概要设计文档，整体概述项目功能、模块
+4. *money.vpp* UML设计图，Visual Paradigm for UML
+
+#####已知缺陷:
+
+1. `money.core.Money.__round__`, [Floating Point Arithmetic: Issues and Limitations](http://docs.python.org/3.3/tutorial/floatingpoint.html)
 
 	计算机的浮点数运算一直存在精度误差问题, 在python3.3中你可以看到如下结果
 
@@ -40,7 +51,7 @@
 	
 	不过这两种方式都不怎么优雅.
 
-2. money.operations.Round, 货币间转换的四舍五入处理问题
+2. `money.operations.Round`, 货币间转换的四舍五入处理问题
 	
 	在以下汇率背景情况下
 			

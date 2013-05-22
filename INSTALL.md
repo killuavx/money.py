@@ -2,8 +2,8 @@
 
 ###安装之前的测试
 
-项目使用*unittest*做单元测试, 配合*nose* + *coverage*做集成测试, 
-功能测试使用*behave*.
+项目使用 *unittest* 做单元测试, 配合 *nose* + *coverage* 做集成测试, 
+功能测试使用 *behave* .
 
 *nix系统下采用以下方式完成单元测试和功能测试:
 

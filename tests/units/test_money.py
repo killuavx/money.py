@@ -1,10 +1,4 @@
 # -*- encoding=utf-8
-'''
-File: test_money.py
-Author: Killua.VX <killua.vx@gmail.com>
-Date: 2013-04-18 21:13
-Description:
-'''
 import sys
 from os.path import dirname, abspath
 cur_dir = dirname(dirname(dirname(abspath(__file__))))
